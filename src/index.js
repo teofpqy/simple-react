@@ -1,10 +1,17 @@
 import React from './react';
-import ReactDOM from './reactDOM';
+import ReactDOM from './react-dom';
+
+
+class Welcome extends React.Component {
+  render() {
+    return <h1>hello, {this.props.name}</h1>;
+  }
+}
 
 function tick() {
   const element = (
     <div>
-      <h1>hello, world</h1>
+      <Welcome name="world"/>
       <h2> It is {new Date().toLocaleTimeString()}. </h2>
     </div>
   )
